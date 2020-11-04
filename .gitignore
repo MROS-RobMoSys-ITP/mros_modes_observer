@@ -29,6 +29,10 @@ devel_isolated/
 .project
 .cproject
 
+# vscode stuff
+.vscode
+
+
 # qcreator stuff
 CMakeLists.txt.user
 
@@ -44,8 +48,15 @@ qtcreator-*
 
 *~
 
+
 # Emacs
 .#*
 
 # Catkin custom files
 CATKIN_IGNORE
+
+# Colcon custom files
+COLCON_IGNORE
+
+#Log folder
+log/*
