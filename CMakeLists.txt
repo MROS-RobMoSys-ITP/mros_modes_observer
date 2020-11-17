@@ -51,8 +51,20 @@ target_include_directories(modes_observer_node PUBLIC
   $<INSTALL_INTERFACE:include>)
 
 
-install(TARGETS modes_observer_node
-  DESTINATION lib/${PROJECT_NAME})
+install(
+  TARGETS modes_observer_core
+  EXPORT modes_observer_core
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
+
+install(
+  TARGETS modes_observer_node
+  DESTINATION lib/${PROJECT_NAME}
+  INCLUDES DESTINATION include
+  )
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY params DESTINATION share/${PROJECT_NAME})
