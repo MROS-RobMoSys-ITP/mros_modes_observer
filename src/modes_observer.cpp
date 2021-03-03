@@ -106,7 +106,7 @@ void ModesObserver::transition_callback(
       component_name.c_str(), 
       transition_msg->goal_state.label.c_str());
     RCLCPP_WARN(this->get_logger(), "Sending diagnostic message");
-    publish_component_diagnostic(component_name, "False");
+    publish_component_diagnostic(component_name, "FALSE");
     
   }
 }
